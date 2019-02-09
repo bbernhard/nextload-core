@@ -34,7 +34,7 @@ Now copy the generate token to your clipboard...we will need that one a bit late
   version: '3'
   services:
     nextload:
-      image: nextload-core:latest
+      image: bbernhard/nextload-core:latest
       restart: always
       environment:
         - NEXTCLOUD_TOKEN=ZgASA-cRxSg-HASAA-sd5Gz-qCtyr
