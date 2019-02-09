@@ -43,7 +43,7 @@ Now copy the generate token to your clipboard...we will need that one a bit late
       volumes:
         - ./logs:/var/log/nextload-core
   ```
-* build and run docker-compose file with: `docker-compose up` resp. ``docker-compose up -d` if you want to start container in detached mode.
+* build and run docker-compose file with: `docker-compose up` resp. `docker-compose up -d` if you want to start container in detached mode.
 
 
 # How it works
