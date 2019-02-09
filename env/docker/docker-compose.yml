@@ -1,0 +1,11 @@
+version: '3'
+services:
+  nextload:
+    image: nextload-core:latest
+    restart: always
+    environment:
+      - NEXTCLOUD_TOKEN=
+      - NEXTCLOUD_URL=
+      - POLL_INTERVAL=1
+    volumes:
+      - ./logs:/var/log/nextload-core

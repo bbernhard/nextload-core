@@ -1,0 +1,4 @@
+output:
+  paths:
+    videos: "nextload/videos"  
+    audios: "nextload/audios"
