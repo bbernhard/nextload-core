@@ -26,7 +26,7 @@ Now copy the generate token to your clipboard...we will need that one a bit late
 
 
 
-* download the `docker-compose.yml` file with `...` to your host system
+* download the `docker-compose.yml` file with `wget https://raw.githubusercontent.com/bbernhard/nextload-core/master/env/docker/docker-compose.yml .` to your host system
 * open the `docker-compose.yml` file with an editor and set the `NEXTLOAD_URL`, `NEXTLOAD_TOKEN` parameter accordingly. 
   If everything is set correctly, the file should look like this: 
 
