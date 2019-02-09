@@ -15,7 +15,15 @@ As nextload-core accesses the nextcloud instance via webdav, we first need to cr
 
 * Navigate to Profile -> Settings -> Security to create a new app token
 
-Name your token `nextload` and click "Generate new app password" to generate a new token. Now copy the generate token to your clipboard...we will need that one a bit later.
+![Create new token](https://github.com/bbernhard/nextload-core/raw/master/images/create_new_app_token_1.png)
+Format: ![Alt Text](url)
+
+
+Name your token `nextload` and click "Generate new app password" to generate a new token. 
+![Create new token1](https://github.com/bbernhard/nextload-core/raw/master/images/create_new_app_token_2.png)
+Format: ![Alt Text](url)
+
+Now copy the generate token to your clipboard...we will need that one a bit later.
 
 
 
@@ -44,7 +52,10 @@ Name your token `nextload` and click "Generate new app password" to generate a n
 
 When the docker container starts up, it will create a new `nextload` folder in your home directory. 
 
-[image]
+![New folder in your home directory](https://github.com/bbernhard/nextload-core/raw/master/images/how_it_works_1.png)
+Format: ![Alt Text](url)
+
+
 
 Inside this folder, there are the nextload config file (`config.yml`) and two folders (`audios`, `videos`). 
 
@@ -53,17 +64,25 @@ Inside this folder, there are the nextload config file (`config.yml`) and two fo
 
 If you want to create a new download task, just create a new `.yml` file inside this directory. The actual name of the file doesn't matter, it just needs to have the ending `.yml`. 
 
-[ image ]
+![Create new download task](https://github.com/bbernhard/nextload-core/raw/master/images/create_new_download_task.png
+)
+Format: ![Alt Text](url)
 
 In the text editor that opens, specify the url and the download format: 
 
-[image ]
+![Create new download task](https://github.com/bbernhard/nextload-core/raw/master/images/create_new_download_task2.png
+)
+Format: ![Alt Text](url)
+
+
 
 Per default, the docker container polls the nextcloud instance every 5 minutes (the `POLL_INTERVAL` can be changed in the `docker-compose.yml` file) for new download tasks. In case a new download task appeared, nextload-core downloads the file and then uploads it to your nextcloud account. 
 
 So, after 5+ minutes you should see the file appear either in the `audios` or the `videos` folder (depending on the format you specified).
 
-[image]
+![Download finished](https://github.com/bbernhard/nextload-core/raw/master/images/create_new_download_task3.png
+)
+Format: ![Alt Text](url)
 
 In case a download task couldn't be processed, nextload-core creates a new file called `task-file-name.error.txt` in your nextcloud instance containing the error message. So, if e.q: the task `1.yml` couldn't be processed, you will see the error log in the file `1.error.txt`. 
 
