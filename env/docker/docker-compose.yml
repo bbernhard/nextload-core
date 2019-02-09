@@ -1,7 +1,7 @@
 version: '3'
 services:
   nextload:
-    image: nextload-core:latest
+    image: bbernhard/nextload-core:latest
     restart: always
     environment:
       - NEXTCLOUD_TOKEN=
