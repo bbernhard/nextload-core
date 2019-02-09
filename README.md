@@ -56,7 +56,7 @@ When the docker container starts up, it will create a new `nextload` folder in y
 
 Inside this folder, there are the nextload config file (`config.yml`) and two folders (`audios`, `videos`). 
 
-
+![Folder structure](https://github.com/bbernhard/nextload-core/raw/master/images/folder_structure.png)
 
 If you want to create a new download task, just create a new `.yml` file inside this directory. The actual name of the file doesn't matter, it just needs to have the ending `.yml`. 
 
@@ -76,7 +76,6 @@ So, after 5+ minutes you should see the file appear either in the `audios` or th
 
 ![Download finished](https://github.com/bbernhard/nextload-core/raw/master/images/create_new_download_task3.png
 )
-Format: ![Alt Text](url)
 
 In case a download task couldn't be processed, nextload-core creates a new file called `task-file-name.error.txt` in your nextcloud instance containing the error message. So, if e.q: the task `1.yml` couldn't be processed, you will see the error log in the file `1.error.txt`. 
 
