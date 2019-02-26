@@ -79,9 +79,12 @@ So, after 5+ minutes you should see the file appear either in the `audios` or th
 
 In case a download task couldn't be processed, nextload-core creates a new file called `task-file-name.error.txt` in your nextcloud instance containing the error message. So, if e.q: the task `1.yml` couldn't be processed, you will see the error log in the file `1.error.txt`. 
 
+# Mobile App
+
+see [nextload-client](https://github.com/bbernhard/nextload-client) for details
 
 # TODO
 * Currently, only mp3 is supported as format. Shouldn't be hard to extend it, to also allow `*.mp4, *.ogg, ..` but it's still on the Todo list
-* android & iOs app
+* ~~android & iOs app~~
 
 
