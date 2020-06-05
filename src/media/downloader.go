@@ -70,7 +70,7 @@ func (p *Downloader) Download(media Media) (string, error, string) {
 	if media.Format == "mp3" {
 		cmd = exec.Command(p.pathToYoutubeDl, media.Url, "--newline", "--prefer-ffmpeg", "--extract-audio", "--audio-format", "mp3", "-o", filename)
 	} else {
-		cmd = exec.Command(p.pathToYoutubeDl, media.Url, "--newline", "--prefer-ffmpeg", "-o", p.videosOutputFolder + filename)
+		cmd = exec.Command(p.pathToYoutubeDl, media.Url, "--newline", "--prefer-ffmpeg", "-o", filename)
 	}
 
 	cmdOutput := ""
