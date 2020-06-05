@@ -10,8 +10,8 @@ RUN curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /home/nextload-core
 RUN chmod a+rx /home/nextload-core/youtube-dl/youtube-dl
 
 RUN curl -L https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz -o /tmp/ffmpeg-release-amd64-static.tar.xz \
-  && cd /tmp/ && tar -xJf ffmpeg-release-amd64-static.tar.xz && cp -r /tmp/ffmpeg-4.1-64bit-static/* /home/nextload-core/youtube-dl/ \
-  && rm -rf /tmp/ffmpeg-4.1-64bit-static
+    && cd /tmp/ && mkdir /tmp/ffmpeg-release-64bit-static && tar -xJf ffmpeg-release-amd64-static.tar.xz -C /tmp/ffmpeg-release-64bit-static --strip-components=1 \
+    && cp -r /tmp/ffmpeg-release-64bit-static/* /home/nextload-core/youtube-dl/ && rm -rf /tmp/ffmpeg-release-64bit-static
 
 RUN curl -L https://dl.google.com/go/go1.11.5.linux-amd64.tar.gz -o /tmp/go1.11.5.linux-amd64.tar.gz \
 	&& cd /tmp/ \
